@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    background: url(//img.youtube.com/vi/t6jlhqNxRYk/maxresdefault.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blur h1 {
+    align-self: center;
+    color: #fff;
+    text-align: center;
+    font-size: 160px;
+    font-family: 'Poppins', sans-serif;
+    line-height: .85;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(15, 15, 15, .5);
+    margin: 0;
+}
+
+/* .video iframe {
+    top:-60px!important;
+} */
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 0 0 20px rgba(15, 15, 15, .5);
+}
+
+.countdown {
+    animation: countdown-animation 5s infinite alternate ease-in-out;
+}
+
+@keyframes countdown-animation {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 6%;
+    opacity: 0.7;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.Burgil {
+    width: 21%;
+    opacity: 0.7;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.twitch-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 7%;
+    opacity: 0.7;
+    filter: drop-shadow(2px 4px 6px black);
+}
